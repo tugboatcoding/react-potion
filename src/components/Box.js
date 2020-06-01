@@ -37,6 +37,7 @@ const Box = styled.div`
       alignItems,
       justifyContent,
       flexBasis,
+      minHeight,
     } = props;
     return `
       ${(m || my || mt || margin || marginY || marginTop) ? `margin-top: ${m || my || mt || margin || marginY || marginTop}px;` : ''}
@@ -52,6 +53,7 @@ const Box = styled.div`
       ${alignItems ? `align-items: ${alignItems};` : ''}
       ${justifyContent ? `justify-content: ${justifyContent};` : ''}
       ${flexBasis ? `flex-basis: ${flexBasis};` : ''}
+      ${minHeight ? `min-height: ${minHeight}px;` : ''}
     `;
   }}
 `;
