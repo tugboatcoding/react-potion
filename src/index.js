@@ -1,0 +1,12 @@
+export { PotionComponent } from './components/index';
+export { default as Box } from './components/Box';
+export { default as Checkbox } from './components/Checkbox';
+export { default as Code } from './components/Code';
+export { default as Heading } from './components/Heading';
+export { default as Image } from './components/Image';
+export { default as Link } from './components/Link';
+export { default as ListItem } from './components/ListItem';
+export { default as OrderedList } from './components/OrderedList';
+export { default as Strong } from './components/Strong';
+export { default as Text } from './components/Text';
+export { default as UnorderedList } from './components/UnorderedList';
