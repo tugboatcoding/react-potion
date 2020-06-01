@@ -12,6 +12,7 @@ const Outer = styled.div`
   line-height: 1.5;
   border-radius: 3px;
   background: rgb(247, 246, 243);
+  width: 100%;
 `;
 
 const CheckboxComponent = ({ appearance, size, children }) => {
