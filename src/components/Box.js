@@ -36,6 +36,7 @@ const Box = styled.div`
       flexDirection,
       alignItems,
       justifyContent,
+      flexBasis,
     } = props;
     return `
       ${(m || my || mt || margin || marginY || marginTop) ? `margin-top: ${m || my || mt || margin || marginY || marginTop}px;` : ''}
@@ -50,6 +51,7 @@ const Box = styled.div`
       ${flexDirection ? `flex-direction: ${flexDirection};` : ''}
       ${alignItems ? `align-items: ${alignItems};` : ''}
       ${justifyContent ? `justify-content: ${justifyContent};` : ''}
+      ${flexBasis ? `flex-basis: ${flexBasis};` : ''}
     `;
   }}
 `;
