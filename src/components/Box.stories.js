@@ -8,6 +8,7 @@ storiesOf('Box', module)
     return (
       <>
         <Box padding={32}><Text>Padded box</Text></Box>
+        <Box padding={['14px', '24px', '32px']}><Text>Responsive padded box</Text></Box>
       </>
     );
   });

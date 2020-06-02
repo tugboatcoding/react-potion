@@ -5,6 +5,7 @@ import Strong from './Strong';
 import Code from './Code';
 import Link from './Link';
 import Box from './Box';
+import Flex from './Flex';
 import OrderedList from './OrderedList';
 import UnorderedList from './UnorderedList';
 import ListItem from './ListItem';
@@ -58,10 +59,10 @@ export const PotionComponent = ({ _type, renderer = (v) => v, ...props }) => {
         <Box {...newProps} />
       )}
       {_type === 'flex' && (
-        <Box {...newProps} />
+        <Flex {...newProps} />
       )}
       {_type === 'columnList' && (
-        <Box display="flex" {...newProps} />
+        <Flex {...newProps} />
       )}
       {_type === 'column' && (
         <Box {...newProps} />
