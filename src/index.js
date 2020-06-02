@@ -10,3 +10,6 @@ export { default as OrderedList } from './components/OrderedList';
 export { default as Strong } from './components/Strong';
 export { default as Text } from './components/Text';
 export { default as UnorderedList } from './components/UnorderedList';
+export { default as Divider } from './components/Divider';
+export { default as Cover } from './components/Cover';
+export { default as PageIcon } from './components/PageIcon';
