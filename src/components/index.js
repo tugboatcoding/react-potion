@@ -9,6 +9,8 @@ import OrderedList from './OrderedList';
 import UnorderedList from './UnorderedList';
 import ListItem from './ListItem';
 import Checkbox from './Checkbox';
+import Image from './Image';
+import Divider from './Divider';
 
 export const PotionComponent = ({ _type, renderer = (v) => v, ...props }) => {
   // Recursively apply Evergreen to children.
@@ -46,7 +48,8 @@ export const PotionComponent = ({ _type, renderer = (v) => v, ...props }) => {
       {_type === 'link1' && <Link {...newProps} />}
       {_type === 'link2' && <Link {...newProps} />}
       {_type === 'link3' && <Link {...newProps} />}
-      {_type === 'image' && <img {...newProps} />}
+      {_type === 'image' && <Image {...newProps} />}
+      {_type === 'divider' && <Divider {...newProps} />}
       {_type === 'box' && (
         <Box {...newProps} />
       )}
