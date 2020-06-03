@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const Image = styled.img`
   object-fit: cover;
   border-radius: 1px;
+  ${({ maxWidth }) => maxWidth ? `max-width: ${typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth};` : ''}
 `;
 
 const ImageComponent = ({ src, ...props }) => {
