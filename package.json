@@ -2,11 +2,12 @@
   "name": "react-potion",
   "version": "0.0.1",
   "description": "A Notion-like design system.",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6007",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -25,20 +26,29 @@
   "homepage": "https://github.com/tugboatcoding/react-potion#readme",
   "devDependencies": {
     "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",
     "@storybook/addons": "^5.3.19",
     "@storybook/react": "^5.3.19",
     "babel-loader": "^8.1.0",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "@storybook/addon-storysource": "^5.3.19",
-    "rebass": "^4.0.7"
+    "rebass": "^4.0.7",
+    "styled-components": ">= 5"
   },
   "peerDependencies": {
     "react": ">= 16.8",
-    "react-dom": ">= 16.8",
-    "styled-components": ">= 5"
+    "react-dom": ">= 16.8"
+  },
+  "publishConfig": {
+    "access": "public",
+    "scope": ""
   }
 }
