@@ -35,4 +35,4 @@ To view examples, open Storybook:
 npm run storybook
 ```
 
-![Storybook](https://raw.githubusercontent.com/tugboatcoding/react-design-system-adapters/master/screenshots/storybook.png)
+![Storybook](https://raw.githubusercontent.com/tugboatcoding/react-potion/master/screenshots/screenshot.png)
