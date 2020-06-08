@@ -12,10 +12,8 @@ A Notion-like design system. This repo is in not affiliated to Notion in any way
 
 ## Get started
 
-Currently, this repo is only available via a git install.
-
 ```bash
-npm i -S git+https://github.com/tugboatcoding/react-notion.git
+npm i -S react-notion
 ```
 
 To use:
@@ -27,28 +25,6 @@ import { Cover, Heading } from 'react-notion';
   src="https://images.unsplash.com/photo-1589802787293-c7009d1fce33?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
 />
 <Heading size={900}>Heading 900</Heading>
-```
-
-You'll need to transpile the source. To do so, use e.g. [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/):
-
-```js
-module: {
-  ...config.module,
-  rules: [
-    ...config.module.rules,
-    {
-      test: /\.js/,
-      include: /node_modules\/react-potion\/.*/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env', '@babel/preset-react'],
-          plugins: ['@babel/plugin-proposal-object-rest-spread'],
-        },
-      },
-    },
-  ],
-},
 ```
 
 ## Examples
