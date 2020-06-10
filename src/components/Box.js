@@ -1,3 +1,20 @@
-import { Box } from 'rebass/styled-components';
+import React from 'react';
+import { Box as BaseBox } from 'rebass/styled-components';
+
+const Box = (props) => (
+  <BaseBox
+    {...props}
+    theme={{
+      breakpoints: [
+        '414px',
+        '768px',
+        '1024px',
+        '1280px',
+        '1920px',
+      ],
+      space: [],
+    }}
+  />
+);
 
 export default Box;
