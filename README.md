@@ -1,3 +1,5 @@
+<a href="https://badge.fury.io/js/react-potion"><img src="https://badge.fury.io/js/react-potion.svg" alt="npm version" height="18"></a>
+
 <div style="display: flex; justify-content: center;"">
   <img src="https://raw.githubusercontent.com/tugboatcoding/react-potion/master/logo.png" width="140px" />
 </div>
