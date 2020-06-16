@@ -8,6 +8,7 @@ storiesOf('Flex', module)
   .add('Default', () => {
     return (
       <>
+        <Flex marginLeft={4}><Text>Left margin Flex</Text></Flex>
         <Flex padding={4}><Text>Padded Flex</Text></Flex>
         <Flex flexDirection={['column','column', 'row']}>
           <Box marginRight={8}>
