@@ -6,6 +6,7 @@ export { default as Cover } from './components/Cover';
 export { default as Divider } from './components/Divider';
 export { default as Flex } from './components/Flex';
 export { default as Heading } from './components/Heading';
+export { default as Iframe } from './components/Iframe';
 export { default as Image } from './components/Image';
 export { default as Link } from './components/Link';
 export { default as ListItem } from './components/ListItem';
