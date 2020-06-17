@@ -15,12 +15,12 @@ const Outer = styled.div`
   width: 100%;
 `;
 
-const CheckboxComponent = ({ appearance, size, children }) => {
+const Code = ({ children }) => {
   return (
-    <Outer appearance={appearance} size={size}>
+    <Outer>
       {children}
     </Outer>
   );
 };
 
-export default CheckboxComponent;
+export default Code;
