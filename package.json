@@ -1,6 +1,6 @@
 {
   "name": "react-potion",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A Notion-like design system.",
   "main": "dist/index.js",
   "scripts": {
@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "@storybook/addon-storysource": "^5.3.19",
+    "@typeform/embed": "^0.21.4",
     "rebass": "^4.0.7",
     "styled-components": ">= 5"
   },
