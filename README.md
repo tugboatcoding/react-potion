@@ -38,3 +38,10 @@ npm run storybook
 ```
 
 ![Storybook](https://raw.githubusercontent.com/tugboatcoding/react-potion/master/screenshots/screenshot.png)
+
+## Release
+
+```
+npm run build
+npm publish
+```
