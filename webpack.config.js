@@ -19,7 +19,10 @@ module.exports = {
         test: /\.png$/,
         exclude: /node_modules/,
         use: {
-          loader: 'file-loader',
+          loader: 'url-loader',
+          options: {
+            limit: Infinity,
+          },
         },
       },
     ]
