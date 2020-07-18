@@ -2,6 +2,7 @@ export { default as Box } from './components/Box';
 export { default as Callout } from './components/Callout';
 export { default as Checkbox } from './components/Checkbox';
 export { default as Code } from './components/Code';
+export { default as Collection } from './components/Collection';
 export { default as Cover } from './components/Cover';
 export { default as Divider } from './components/Divider';
 export { default as Flex } from './components/Flex';
