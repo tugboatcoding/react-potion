@@ -160,6 +160,13 @@ const Cell = ({
 const CHAR_WIDTH = 8;
 const TAG_PADDING = 2; // 2 characters.
 
+const getLength = (row) => {
+  const { value } = row;
+  return typeof value === 'string'
+    ? value.length
+    : ((value.props && value.props.children && value.props.children.length) || 8);
+};
+
 const Table = ({
   cols,
   rows,
@@ -172,7 +179,7 @@ const Table = ({
         const padding = length * TAG_PADDING + (length - 1);
         return padding + r.value.reduce((memo, tag) => memo + tag.value.length, 0);
       }
-      return r.value.length;
+      return getLength(r);
     });
     return acc.map((prev, idx) => Math.max(prev, lengths[idx]));
   }, colLengths);
