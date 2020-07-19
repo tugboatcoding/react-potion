@@ -186,6 +186,10 @@ const getLength = (cell) => {
   return length;
 };
 
+const TableInner = styled.div`
+  overflow: scroll;
+`;
+
 const Table = ({
   cols,
   rows,
@@ -204,7 +208,7 @@ const Table = ({
   }, colLengths);
   return (
     <div>
-      <div>
+      <TableInner>
         <Row>
           {cols.map((col, colIdx) => (
             <Col
@@ -228,7 +232,7 @@ const Table = ({
             ))}
           </Row>
         ))}
-      </div>
+      </TableInner>
       <Footer>
         <Cell
           border={false}
