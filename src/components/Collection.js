@@ -42,8 +42,10 @@ const ColInner = styled(TableText)`
   color: rgba(55, 53, 47, 0.6);
 `;
 
-const Col = ({ type, value, width }) => (
-  <ColOuter width={width}>
+const Col = ({
+  type, value, border = true, width,
+}) => (
+  <ColOuter border={border} width={width}>
     <Flex alignItems="center">
       <Box mr="4px">
         {type === 'title' && (
@@ -209,6 +211,7 @@ const Table = ({
               key={colIdx}
               type={col.type}
               value={col.value}
+              border={colIdx !== cols.length - 1}
               width={maxLengths[colIdx] * CHAR_WIDTH}
             />
           ))}
@@ -216,7 +219,12 @@ const Table = ({
         {rows.map((row, rowIdx) => (
           <Row key={rowIdx}>
             {row.map((cell, cellIdx) => (
-              <Cell key={cellIdx} width={maxLengths[cellIdx] * CHAR_WIDTH} {...cell} />
+              <Cell
+                key={cellIdx}
+                border={cellIdx !== row.length - 1}
+                width={maxLengths[cellIdx] * CHAR_WIDTH}
+                {...cell}
+              />
             ))}
           </Row>
         ))}
