@@ -162,16 +162,17 @@ const TAG_PADDING = 2; // 2 characters.
 
 const getLength = (row) => {
   const { value } = row;
-  return typeof value === 'string'
+  const length = typeof value === 'string'
     ? value.length
     : ((value.props && value.props.children && value.props.children.length) || 8);
+  return length;
 };
 
 const Table = ({
   cols,
   rows,
 }) => {
-  const colLengths = cols.map((col) => col.value.length + 3);
+  const colLengths = cols.map((col) => getLength(col) + 3);
   const maxLengths = rows.reduce((acc, row) => {
     const lengths = row.map((r) => {
       if (Array.isArray(r.value)) {

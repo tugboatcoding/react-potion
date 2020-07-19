@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import Markdown from 'markdown-to-jsx';
 import Box from './Box';
 import Collection from './Collection';
 
@@ -42,7 +43,7 @@ storiesOf('Collection', module)
               type: 'title',
             },
             {
-              value: 'Type',
+              value: <Markdown>Type</Markdown>,
               type: 'text',
             },
             {
@@ -54,23 +55,23 @@ storiesOf('Collection', module)
               type: 'multi_select',
             },
             {
-              value: 'Food?',
+              value: <Markdown>Food?</Markdown>,
               type: 'text',
             },
             {
-              value: 'Must reserve?',
+              value: <Markdown>Must reserve?</Markdown>,
               type: 'text',
             },
             {
-              value: 'Busy?',
+              value: <Markdown>Busy?</Markdown>,
               type: 'text',
             },
             {
-              value: 'Notes',
+              value: <Markdown>Notes</Markdown>,
               type: 'text',
             },
             {
-              value: 'URL',
+              value: <Markdown>URL</Markdown>,
               type: 'text',
             },
           ]}
@@ -81,7 +82,7 @@ storiesOf('Collection', module)
                 type: 'title',
               },
               {
-                value: 'Pub 🍺',
+                value: <Markdown>{'Pub 🍺'}</Markdown>,
                 type: 'text',
               },
               {
@@ -110,23 +111,23 @@ storiesOf('Collection', module)
                 type: 'multi_select',
               },
               {
-                value: '🍔🐟🍟',
+                value: <Markdown>{'🍔🐟🍟'}</Markdown>,
                 type: 'text',
               },
               {
-                value: '',
+                value: <Markdown>{''}</Markdown>,
                 type: 'text',
               },
               {
-                value: '👤',
+                value: <Markdown>{'👤'}</Markdown>,
                 type: 'text',
               },
               {
-                value: "If you want craft beers, Cloudwater is on the 'beer mile' and serves sweet, hoppy IPAs and coffee stouts straight from the brewery",
+                value: <Markdown>If you want craft beers, Cloudwater is on the 'beer mile' and serves sweet, hoppy IPAs and coffee stouts straight from the brewery</Markdown>,
                 type: 'text',
               },
               {
-                value: '[https://cloudwaterbrew.co/location-enid-st](https://cloudwaterbrew.co/location-enid-st)',
+                value: <Markdown>[https://cloudwaterbrew.co/location-enid-st](https://cloudwaterbrew.co/location-enid-st)</Markdown>,
                 type: 'text',
               },
             ],
@@ -136,7 +137,7 @@ storiesOf('Collection', module)
                 type: 'title',
               },
               {
-                value: 'Taproom 🍻',
+                value: <Markdown>{'Taproom 🍻'}</Markdown>,
                 type: 'text',
               },
               {
@@ -165,23 +166,23 @@ storiesOf('Collection', module)
                 type: 'multi_select',
               },
               {
-                value: '',
+                value: <Markdown>{''}</Markdown>,
                 type: 'text',
               },
               {
-                value: '',
+                value: <Markdown>{''}</Markdown>,
                 type: 'text',
               },
               {
-                value: '👥',
+                value: <Markdown>{'👥'}</Markdown>,
                 type: 'text',
               },
               {
-                value: 'Traditional pub food with old man ales (red ales). Can reserve',
+                value: <Markdown>Traditional pub food with old man ales (red ales). Can reserve</Markdown>,
                 type: 'text',
               },
               {
-                value: '[http://thedeanswift.com/](http://thedeanswift.com/)',
+                value: <Markdown>[http://thedeanswift.com/](http://thedeanswift.com/)</Markdown>,
                 type: 'text',
               },
             ],
@@ -232,11 +233,11 @@ storiesOf('Collection', module)
                 type: 'text',
               },
               {
-                value: 'Gastropub/gourmet dining. Reservation needed',
+                value: <Markdown>Gastropub/gourmet dining. Reservation needed</Markdown>,
                 type: 'text',
               },
               {
-                value: '[http://www.thegarrison.co.uk/](http://www.thegarrison.co.uk/)',
+                value: <Markdown>[http://www.thegarrison.co.uk/](http://www.thegarrison.co.uk/)</Markdown>,
                 type: 'text',
               },
             ],
@@ -275,23 +276,23 @@ storiesOf('Collection', module)
                 type: 'multi_select',
               },
               {
-                value: '🍔',
+                value: <Markdown>{'🍔'}</Markdown>,
                 type: 'text',
               },
               {
-                value: '',
+                value: <Markdown>{''}</Markdown>,
                 type: 'text',
               },
               {
-                value: '👥👤',
+                value: <Markdown>{'👥👤'}</Markdown>,
                 type: 'text',
               },
               {
-                value: 'Along the river, with a great view of Tower Bridge. More a spot for drinking a pint on a sunny day with a good view',
+                value: <Markdown>Along the river, with a great view of Tower Bridge. More a spot for drinking a pint on a sunny day with a good view</Markdown>,
                 type: 'text',
               },
               {
-                value: '[https://www.nicholsonspubs.co.uk/restaurants/london/thehornimanathayslondonbridge](https://www.nicholsonspubs.co.uk/restaurants/london/thehornimanathayslondonbridge)',
+                value: <Markdown>[https://www.nicholsonspubs.co.uk/restaurants/london/thehornimanathayslondonbridge](https://www.nicholsonspubs.co.uk/restaurants/london/thehornimanathayslondonbridge)</Markdown>,
                 type: 'text',
               },
             ],
@@ -301,7 +302,7 @@ storiesOf('Collection', module)
                 type: 'title',
               },
               {
-                value: 'Pub 🍺',
+                value: <Markdown>{'Pub 🍺'}</Markdown>,
                 type: 'text',
               },
               {
@@ -325,23 +326,23 @@ storiesOf('Collection', module)
                 type: 'multi_select',
               },
               {
-                value: '🍔🐟🍟',
+                value: <Markdown>{'🍔🐟🍟'}</Markdown>,
                 type: 'text',
               },
               {
-                value: '',
+                value: <Markdown>{''}</Markdown>,
                 type: 'text',
               },
               {
-                value: '👥👥',
+                value: <Markdown>{'👥👥'}</Markdown>,
                 type: 'text',
               },
               {
-                value: 'Along the river, slightly further out of town, this pub is one of the busy residential pubs in Hammersmith. Lovely on a sunny day',
+                value: <Markdown>Along the river, slightly further out of town, this pub is one of the busy residential pubs in Hammersmith. Lovely on a sunny day</Markdown>,
                 type: 'text',
               },
               {
-                value: '[https://www.blueanchorlondon.com/](https://www.blueanchorlondon.com/)',
+                value: <Markdown>[https://www.blueanchorlondon.com/](https://www.blueanchorlondon.com/)</Markdown>,
                 type: 'text',
               },
             ],
@@ -351,7 +352,7 @@ storiesOf('Collection', module)
                 type: 'title',
               },
               {
-                value: 'Pub 🍺',
+                value: <Markdown>{'Pub 🍺'}</Markdown>,
                 type: 'text',
               },
               {
@@ -375,23 +376,23 @@ storiesOf('Collection', module)
                 type: 'multi_select',
               },
               {
-                value: '',
+                value: <Markdown>{''}</Markdown>,
                 type: 'text',
               },
               {
-                value: '',
+                value: <Markdown>{''}</Markdown>,
                 type: 'text',
               },
               {
-                value: '👥👥',
+                value: <Markdown>{'👥👥'}</Markdown>,
                 type: 'text',
               },
               {
-                value: 'Where politicians go and get booze',
+                value: <Markdown>Where politicians go and get booze</Markdown>,
                 type: 'text',
               },
               {
-                value: '[https://www.westminsterarms.co.uk/](https://www.westminsterarms.co.uk/)',
+                value: <Markdown>[https://www.westminsterarms.co.uk/](https://www.westminsterarms.co.uk/)</Markdown>,
                 type: 'text',
               },
             ],
@@ -401,7 +402,7 @@ storiesOf('Collection', module)
                 type: 'title',
               },
               {
-                value: 'Bar 🍺🍷',
+                value: <Markdown>{'Bar 🍺🍷'}</Markdown>,
                 type: 'text',
               },
               {
@@ -425,23 +426,23 @@ storiesOf('Collection', module)
                 type: 'multi_select',
               },
               {
-                value: '🍔🐟🍟',
+                value: <Markdown>{'🍔🐟🍟'}</Markdown>,
                 type: 'text',
               },
               {
-                value: '',
+                value: <Markdown>{''}</Markdown>,
                 type: 'text',
               },
               {
-                value: '👥',
+                value: <Markdown>{'👥'}</Markdown>,
                 type: 'text',
               },
               {
-                value: 'A former bank turned into bars and restaurants. Very ornate interior, with emerald green leather seating, and live band occasionally playing live music in the middle of The City',
+                value: <Markdown>A former bank turned into bars and restaurants. Very ornate interior, with emerald green leather seating, and live band occasionally playing live music in the middle of The City</Markdown>,
                 type: 'text',
               },
               {
-                value: '[https://www.thened.com/restaurants](https://www.thened.com/restaurants)',
+                value: <Markdown>[https://www.thened.com/restaurants](https://www.thened.com/restaurants)</Markdown>,
                 type: 'text',
               },
             ],
@@ -451,7 +452,7 @@ storiesOf('Collection', module)
                 type: 'title',
               },
               {
-                value: 'Pub 🍺',
+                value: <Markdown>{'Pub 🍺'}</Markdown>,
                 type: 'text',
               },
               {
@@ -475,23 +476,23 @@ storiesOf('Collection', module)
                 type: 'multi_select',
               },
               {
-                value: '🍔🐟🍟',
+                value: <Markdown>{'🍔🐟🍟'}</Markdown>,
                 type: 'text',
               },
               {
-                value: '',
+                value: <Markdown>{''}</Markdown>,
                 type: 'text',
               },
               {
-                value: '👤',
+                value: <Markdown>{'👤'}</Markdown>,
                 type: 'text',
               },
               {
-                value: 'Traditional pub with a good scotch egg. Can reserve',
+                value: <Markdown>Traditional pub with a good scotch egg. Can reserve</Markdown>,
                 type: 'text',
               },
               {
-                value: '[https://royaloaklondon.co.uk/](https://royaloaklondon.co.uk/)',
+                value: <Markdown>[https://royaloaklondon.co.uk/](https://royaloaklondon.co.uk/)</Markdown>,
                 type: 'text',
               },
             ],
@@ -501,7 +502,7 @@ storiesOf('Collection', module)
                 type: 'title',
               },
               {
-                value: 'Pub 🍺',
+                value: <Markdown>{'Pub 🍺'}</Markdown>,
                 type: 'text',
               },
               {
@@ -525,23 +526,23 @@ storiesOf('Collection', module)
                 type: 'multi_select',
               },
               {
-                value: '🍔🐟🍟',
+                value: <Markdown>{'🍔🐟🍟'}</Markdown>,
                 type: 'text',
               },
               {
-                value: '',
+                value: <Markdown>{''}</Markdown>,
                 type: 'text',
               },
               {
-                value: '👥',
+                value: <Markdown>{'👥'}</Markdown>,
                 type: 'text',
               },
               {
-                value: 'Traditional pub with good dining, tucked away in Kensington. Serves old man ales (red ales)',
+                value: <Markdown>Traditional pub with good dining, tucked away in Kensington. Serves old man ales (red ales)</Markdown>,
                 type: 'text',
               },
               {
-                value: '[https://www.thewindsorcastlekensington.co.uk/](https://www.thewindsorcastlekensington.co.uk/?utm_source=google&utm_medium=organic&utm_campaign=gmb)',
+                value: <Markdown>[https://www.thewindsorcastlekensington.co.uk/](https://www.thewindsorcastlekensington.co.uk/?utm_source=google&utm_medium=organic&utm_campaign=gmb)</Markdown>,
                 type: 'text',
               },
             ],
@@ -551,7 +552,7 @@ storiesOf('Collection', module)
                 type: 'title',
               },
               {
-                value: 'Cocktail bar 🍺🍷',
+                value: <Markdown>{'Cocktail bar 🍺🍷'}</Markdown>,
                 type: 'text',
               },
               {
@@ -580,23 +581,23 @@ storiesOf('Collection', module)
                 type: 'multi_select',
               },
               {
-                value: '🥪',
+                value: <Markdown>{'🥪'}</Markdown>,
                 type: 'text',
               },
               {
-                value: '',
+                value: <Markdown>{''}</Markdown>,
                 type: 'text',
               },
               {
-                value: '👥👤',
+                value: <Markdown>{'👥👤'}</Markdown>,
                 type: 'text',
               },
               {
-                value: "Lovely bar themed after and inspired by Mr. Fogg's 80 days around the world. Expect a charming experience. Try other Mr. Fogg's bars too (e.g. Gin Parlour, Tavern or House of Botanicals). Can reserve",
+                value: <Markdown>Lovely bar themed after and inspired by Mr. Fogg's 80 days around the world. Expect a charming experience. Try other Mr. Fogg's bars too (e.g. Gin Parlour, Tavern or House of Botanicals). Can reserve</Markdown>,
                 type: 'text',
               },
               {
-                value: '[https://www.mr-foggs.com/mr-foggs-residence/](https://www.mr-foggs.com/mr-foggs-residence/)',
+                value: <Markdown>[https://www.mr-foggs.com/mr-foggs-residence/](https://www.mr-foggs.com/mr-foggs-residence/)</Markdown>,
                 type: 'text',
               },
             ],
@@ -606,7 +607,7 @@ storiesOf('Collection', module)
                 type: 'title',
               },
               {
-                value: 'Wine bar 🍷',
+                value: <Markdown>{'Wine bar 🍷'}</Markdown>,
                 type: 'text',
               },
               {
@@ -635,23 +636,23 @@ storiesOf('Collection', module)
                 type: 'multi_select',
               },
               {
-                value: '🧀',
+                value: <Markdown>{'🧀'}</Markdown>,
                 type: 'text',
               },
               {
-                value: '',
+                value: <Markdown>{''}</Markdown>,
                 type: 'text',
               },
               {
-                value: '👥👤',
+                value: <Markdown>{'👥👤'}</Markdown>,
                 type: 'text',
               },
               {
-                value: 'Dark, under archways, drink wine in a candle lit, dungeon-like place. Recommend a cheese board too',
+                value: <Markdown>Dark, under archways, drink wine in a candle lit, dungeon-like place. Recommend a cheese board too</Markdown>,
                 type: 'text',
               },
               {
-                value: '[https://gordonswinebar.com/gallery/](https://gordonswinebar.com/gallery/)',
+                value: <Markdown>[https://gordonswinebar.com/gallery/](https://gordonswinebar.com/gallery/)</Markdown>,
                 type: 'text',
               },
             ],
@@ -661,7 +662,7 @@ storiesOf('Collection', module)
                 type: 'title',
               },
               {
-                value: 'Pub 🍺',
+                value: <Markdown>{'Pub 🍺'}</Markdown>,
                 type: 'text',
               },
               {
@@ -685,23 +686,23 @@ storiesOf('Collection', module)
                 type: 'multi_select',
               },
               {
-                value: '🍔',
+                value: <Markdown>{'🍔'}</Markdown>,
                 type: 'text',
               },
               {
-                value: '',
+                value: <Markdown>{''}</Markdown>,
                 type: 'text',
               },
               {
-                value: '👥',
+                value: <Markdown>{'👥'}</Markdown>,
                 type: 'text',
               },
               {
-                value: 'Quaint, pretty, little pub in Kensington. Can reserve',
+                value: <Markdown>Quaint, pretty, little pub in Kensington. Can reserve</Markdown>,
                 type: 'text',
               },
               {
-                value: '[https://www.thebuildersarmskensington.co.u](https://www.thebuildersarmskensington.co.u/)',
+                value: <Markdown>[https://www.thebuildersarmskensington.co.u](https://www.thebuildersarmskensington.co.u/)</Markdown>,
                 type: 'text',
               },
             ],
@@ -711,7 +712,7 @@ storiesOf('Collection', module)
                 type: 'title',
               },
               {
-                value: '',
+                value: <Markdown>{''}</Markdown>,
                 type: 'text',
               },
               {
@@ -735,23 +736,23 @@ storiesOf('Collection', module)
                 type: 'multi_select',
               },
               {
-                value: '🥦🐟🥩',
+                value: <Markdown>{'🥦🐟🥩'}</Markdown>,
                 type: 'text',
               },
               {
-                value: '',
+                value: <Markdown>{''}</Markdown>,
                 type: 'text',
               },
               {
-                value: '👥',
+                value: <Markdown>{'👥'}</Markdown>,
                 type: 'text',
               },
               {
-                value: 'Fairly new pub serving gourmet food',
+                value: <Markdown>Fairly new pub serving gourmet food</Markdown>,
                 type: 'text',
               },
               {
-                value: '[https://theprincessofshoreditch.com/](https://theprincessofshoreditch.com/)',
+                value: <Markdown>[https://theprincessofshoreditch.com/](https://theprincessofshoreditch.com/)</Markdown>,
                 type: 'text',
               },
             ],
