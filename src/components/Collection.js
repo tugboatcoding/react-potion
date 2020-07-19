@@ -172,7 +172,16 @@ const getLength = (cell) => {
   }
   const length = typeof value === 'string'
     ? value.length
-    : ((value.props && value.props.children && value.props.children.length) || 8);
+    : (
+      (
+        (
+          value.props && (
+            (value.props.children && value.props.children.length)
+            || (value.props.source && value.props.source.length)
+          )
+        )
+      ) || 8
+    );
   return length;
 };
 
