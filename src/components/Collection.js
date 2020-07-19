@@ -106,6 +106,11 @@ const TagOuter = styled.div`
   background-color: ${({ color }) => getBgColor(color)};
 `;
 
+const TagText = styled(CellText)`
+  text-overflow: ellipsis;
+  overflow: hidden;
+`;
+
 const Footer = styled.div`
   display: flex;
   font-size: 14px;
@@ -114,7 +119,7 @@ const Footer = styled.div`
 `;
 
 const Tag = ({ color, value }) => (
-  <TagOuter color={color}><CellText>{value}</CellText></TagOuter>
+  <TagOuter color={color}><TagText>{value}</TagText></TagOuter>
 );
 
 const Cell = ({
@@ -160,8 +165,11 @@ const Cell = ({
 const CHAR_WIDTH = 8;
 const TAG_PADDING = 2; // 2 characters.
 
-const getLength = (row) => {
-  const { value } = row;
+const getLength = (cell) => {
+  const { value } = cell;
+  if (typeof value !== 'string') {
+    console.warn('Not a string:', value);
+  }
   const length = typeof value === 'string'
     ? value.length
     : ((value.props && value.props.children && value.props.children.length) || 8);
@@ -174,13 +182,13 @@ const Table = ({
 }) => {
   const colLengths = cols.map((col) => getLength(col) + 3);
   const maxLengths = rows.reduce((acc, row) => {
-    const lengths = row.map((r) => {
-      if (Array.isArray(r.value)) {
-        const { length } = r.value;
+    const lengths = row.map((cell) => {
+      if (Array.isArray(cell.value)) {
+        const { length } = cell.value;
         const padding = length * TAG_PADDING + (length - 1);
-        return padding + r.value.reduce((memo, tag) => memo + tag.value.length, 0);
+        return padding + cell.value.reduce((memo, tag) => memo + tag.value.length, 0);
       }
-      return getLength(r);
+      return getLength(cell);
     });
     return acc.map((prev, idx) => Math.max(prev, lengths[idx]));
   }, colLengths);
