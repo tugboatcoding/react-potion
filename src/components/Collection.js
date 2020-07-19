@@ -24,14 +24,16 @@ const CellOuter = styled.div`
   align-items: center;
   flex-shrink: 0;
   padding: 0 8px;
-  overflow: hidden;
-  height: 32px;
   ${({ width }) => (width ? `width: ${width}px;` : '')}
   max-width: 313px;
   ${({ border = true }) => (border ? 'border-right: 1px solid rgba(55, 53, 47, 0.09);' : '')}
 `;
 
-const ColOuter = styled(TableText)`
+const ColOuter = styled(CellOuter)`
+  height: 32px;
+`;
+
+const ColInner = styled(TableText)`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -40,7 +42,7 @@ const ColOuter = styled(TableText)`
 `;
 
 const Col = ({ type, value, width }) => (
-  <CellOuter width={width}>
+  <ColOuter width={width}>
     <Flex alignItems="center">
       <Box mr="4px">
         {type === 'title' && (
@@ -53,15 +55,14 @@ const Col = ({ type, value, width }) => (
           <img alt="Multi-select" src={multiSelect} width="14" height="12" />
         )}
       </Box>
-      <ColOuter>
+      <ColInner>
         {value}
-      </ColOuter>
+      </ColInner>
     </Flex>
-  </CellOuter>
+  </ColOuter>
 );
 
 const Row = styled(Flex)`
-  height: 33px;
   color: rgba(55, 53, 47, 0.6);
   border-bottom: 1px solid rgba(55, 53, 47, 0.16);
 `;
@@ -77,7 +78,7 @@ const CountOuter = styled(Text)`
 `;
 
 const CellText = styled(TableText)`
-  white-space: nowrap;
+  word-break: break-word;
 `;
 
 const COLORS = {
@@ -141,9 +142,9 @@ const Cell = ({
   case 'multi_select':
     body = (
       <Box pt="7px" pb="1px">
-        <Flex alignItems="center">
+        <Flex alignItems="center" flexWrap="wrap">
           {(value.map((tag, idx) => (
-            <Box ml={idx === 0 ? 0 : `${CHAR_WIDTH}px`}>
+            <Box mr={idx === value.length - 1 ? 0 : `${CHAR_WIDTH}px`}>
               <Tag color={tag.color} value={tag.value} />
             </Box>
           )))}
@@ -167,9 +168,6 @@ const TAG_PADDING = 2; // 2 characters.
 
 const getLength = (cell) => {
   const { value } = cell;
-  if (typeof value !== 'string') {
-    console.warn('Not a string:', value);
-  }
   const length = typeof value === 'string'
     ? value.length
     : (

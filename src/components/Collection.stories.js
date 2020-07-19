@@ -632,6 +632,16 @@ storiesOf('Collection', module)
                     color: 'purple',
                     value: 'Cheese',
                   },
+                  {
+                    id: '77efece0-40e6-4014-be5c-5ecacafff518',
+                    color: 'purple',
+                    value: 'Cheese',
+                  },
+                  {
+                    id: '77efece0-40e6-4014-be5c-5ecacafff518',
+                    color: 'purple',
+                    value: 'Cheese',
+                  },
                 ],
                 type: 'multi_select',
               },
