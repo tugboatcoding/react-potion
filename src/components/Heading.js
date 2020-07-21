@@ -34,15 +34,13 @@ const Heading4 = styled.h4`
   line-height: 1.3;
 `;
 
-const Heading = ({ size = 800, children }) => {
-  return (
-    <>
-      {size === 900 && <Heading1>{children}</Heading1>}
-      {size === 800 && <Heading2>{children}</Heading2>}
-      {size === 700 && <Heading3>{children}</Heading3>}
-      {size === 600 && <Heading4>{children}</Heading4>}
-    </>
-  );
-};
+const Heading = ({ size = 800, children }) => (
+  <>
+    {size === 900 && <Heading1>{children}</Heading1>}
+    {size === 800 && <Heading2>{children}</Heading2>}
+    {size === 700 && <Heading3>{children}</Heading3>}
+    {size === 600 && <Heading4>{children}</Heading4>}
+  </>
+);
 
 export default Heading;

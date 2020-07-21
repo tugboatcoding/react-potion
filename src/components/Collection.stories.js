@@ -770,4 +770,52 @@ storiesOf('Collection', module)
         />
       </Box>
     </>
+  ))
+  .add('Single collection view', () => (
+    <>
+      <Box padding={['14px', '24px', '32px', '48px', '48px']}>
+        <Collection
+          name="Hola Mundo"
+          views={[
+            {
+              id: '5355ee5b-f904-4a3f-b438-2d8b4cfddaa1',
+              name: '',
+              type: 'list',
+            },
+          ]}
+          cols={[
+            {
+              value: 'Score /5',
+              type: 'select',
+            },
+            {
+              value: 'Name',
+              type: 'title',
+            },
+          ]}
+          rows={[
+            [
+              {
+                value: '⭐️⭐️⭐️⭐️',
+                type: 'select',
+              },
+              {
+                value: 'Hello world!',
+                type: 'title',
+              },
+            ],
+            [
+              {
+                value: '⭐️⭐️⭐️⭐️',
+                type: 'select',
+              },
+              {
+                value: 'Hallo welt!',
+                type: 'title',
+              },
+            ],
+          ]}
+        />
+      </Box>
+    </>
   ));

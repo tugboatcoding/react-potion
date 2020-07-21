@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Box, Flex } from 'rebass';
 import styled from 'styled-components';
+import Heading from './Heading';
 import Text from './Text';
 import chevron from '../assets/images/chevron.png';
 import page from '../assets/images/page.png';
@@ -13,7 +14,7 @@ import title from '../assets/images/title.png';
 import text from '../assets/images/text.png';
 import multiSelect from '../assets/images/multi-select.png';
 
-const findMultiSelectColIdx = (cols) => cols.findIndex((col) => col.type === 'multi_select');
+const findSelectColIdx = (cols) => cols.findIndex((col) => ['select', 'multi_select'].includes(col.type));
 
 const TableText = styled(Text)`
   font-size: 14px;
@@ -101,7 +102,6 @@ const TagOuter = styled.div`
   display: flex;
   align-items: center;
   min-width: 0px;
-  height: 18px;
   border-radius: 3px;
   padding: 0 6px;
   line-height: 120%;
@@ -141,6 +141,15 @@ const Cell = ({
   case 'title':
   case 'text':
     body = <CellText>{value}</CellText>;
+    break;
+  case 'select':
+    body = (
+      <Box pt="7px" pb="1px">
+        <Flex alignItems="center" flexWrap="wrap">
+          <Tag value={value} />
+        </Flex>
+      </Box>
+    );
     break;
   case 'multi_select':
     body = (
@@ -345,15 +354,22 @@ const ViewToggle = ({
 
   return (
     <div>
-      <ViewToggleOuter onClick={() => setPickerOpen(true)}>
-        <Box px="6px">
-          <Flex alignItems="center">
-            <ViewIcon type={views[viewIdx].type} />
-            <ToggleText>{views[viewIdx].name}</ToggleText>
-            <img alt="Toggle" src={chevron} width="10" height="6" />
-          </Flex>
-        </Box>
-      </ViewToggleOuter>
+      {views.length === 1 && (
+        <Heading size={600}>
+          {name}
+        </Heading>
+      )}
+      {views.length > 1 && (
+        <ViewToggleOuter onClick={() => setPickerOpen(true)}>
+          <Box px="6px">
+            <Flex alignItems="center">
+              <ViewIcon type={views[viewIdx].type} />
+              <ToggleText>{views[viewIdx].name}</ToggleText>
+              <img alt="Toggle" src={chevron} width="10" height="6" />
+            </Flex>
+          </Box>
+        </ViewToggleOuter>
+      )}
       {pickerOpen && (
         <PickerOuter ref={ref}>
           <Picker>
@@ -417,11 +433,12 @@ const ListItemText = styled.div`
 `;
 
 const List = ({ cols, rows }) => {
-  const multiSelectColIdx = findMultiSelectColIdx(cols);
+  const selectColIdx = findSelectColIdx(cols);
   return (
     <div>
       {rows.map((row, rowIdx) => {
-        const multiSelectCol = multiSelectColIdx >= 0 ? row[multiSelectColIdx] : null;
+        const selectCol = selectColIdx >= 0 ? row[selectColIdx] : null;
+        const t = row.find((cell) => cell.type === 'title');
         return (
           <Page key={rowIdx}>
             <Flex justifyContent="space-between" width="100%">
@@ -431,15 +448,15 @@ const List = ({ cols, rows }) => {
                 </PageIcon>
                 <ListItemText>
                   <Text>
-                    {row[0].value}
+                    {t && t.value}
                   </Text>
                 </ListItemText>
               </Flex>
-              {multiSelectCol && (
+              {selectCol && (
                 <Cell
                   border={false}
-                  type={multiSelectCol.type}
-                  value={multiSelectCol.value}
+                  type={selectCol.type}
+                  value={selectCol.value}
                 />
               )}
             </Flex>
@@ -480,27 +497,30 @@ const GalleryItemText = styled(Text)`
 const Gallery = ({ rows }) => (
   <div>
     <Grid>
-      {rows.map((row, rowIdx) => (
-        <Card key={rowIdx}>
-          <Box minHeight="155px"></Box>
-          <Box py="8px" px="10px">
-            <GalleryItemText>{row[0].value}</GalleryItemText>
-          </Box>
-        </Card>
-      ))}
+      {rows.map((row, rowIdx) => {
+        const t = row.find((cell) => cell.type === 'title');
+        return (
+          <Card key={rowIdx}>
+            <Box minHeight="155px"></Box>
+            <Box py="8px" px="10px">
+              <GalleryItemText>{t && t.value}</GalleryItemText>
+            </Box>
+          </Card>
+        );
+      })}
     </Grid>
   </div>
 );
 
 const Board = ({ cols, rows }) => {
-  const multiSelectColIdx = findMultiSelectColIdx(cols);
+  const selectColIdx = findSelectColIdx(cols);
 
   let tagRowsById;
-  if (multiSelectColIdx >= 0) {
+  if (selectColIdx >= 0) {
     tagRowsById = rows.reduce((acc, row, rowIdx) => {
-      const multiSelectCol = row[multiSelectColIdx];
-      if (multiSelectCol.value.length > 0) {
-        const tagIds = multiSelectCol.value.map((v) => v.id);
+      const selectCol = row[selectColIdx];
+      if (selectCol.value.length > 0) {
+        const tagIds = selectCol.value.map((v) => v.id);
 
         return tagIds.reduce((memo, tagId) => ({
           ...memo,
@@ -548,7 +568,7 @@ const Board = ({ cols, rows }) => {
   ];
 
   const allTags = rows
-    .map((row) => (multiSelectColIdx >= 0 ? row[multiSelectColIdx].value : undefined))
+    .map((row) => (selectColIdx >= 0 ? row[selectColIdx].value : undefined))
     .filter(Boolean)
     .reduce((acc, vs) => [...acc, ...vs], [])
     .reduce((acc, tag) => ({
