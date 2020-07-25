@@ -411,8 +411,7 @@ const ViewToggle = ({
 
 const Page = styled(Clickable)`
   display: flex;
-  height: 30px;
-  overflow: hidden;
+  min-height: 30px;
   border-radius: 3px;
 `;
 
@@ -446,11 +445,13 @@ const List = ({ cols, rows }) => {
                 <PageIcon>
                   <img alt="Page" src={page} width="16" height="20" />
                 </PageIcon>
-                <ListItemText>
-                  <Text>
-                    {t && t.value}
-                  </Text>
-                </ListItemText>
+                <Box pr="8px">
+                  <ListItemText>
+                    <Text>
+                      {t && t.value}
+                    </Text>
+                  </ListItemText>
+                </Box>
               </Flex>
               {selectCol && (
                 <Cell
