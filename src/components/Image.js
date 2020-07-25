@@ -3,14 +3,14 @@ import styled from 'styled-components';
 
 const Image = styled.img`
   object-fit: cover;
+  background-position: center;
+  object-position: center;
   border-radius: 1px;
-  ${({ maxWidth }) => maxWidth ? `max-width: ${typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth};` : ''}
+  ${({ maxWidth }) => (maxWidth ? `max-width: ${typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth};` : '')}
 `;
 
-const ImageComponent = ({ src, ...props }) => {
-  return (
-    <Image src={src} {...props} />
-  );
-};
+const ImageComponent = ({ src, ...props }) => (
+  <Image src={src} {...props} />
+);
 
 export default ImageComponent;
