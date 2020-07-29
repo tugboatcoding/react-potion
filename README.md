@@ -12,6 +12,8 @@ A Notion-like design system. This repo is in not affiliated to Notion in any way
 
 [Notion](http://notion.so/) is great for writing content but also has a nice design sytem for blocks-based design. This repo attempts to replicate some of the benefits that Notion offers.
 
+The project was originally created for and is used by [Pageably](https://pageably.com), a CMS for your Notion pages.
+
 ## Get started
 
 ```bash
