@@ -155,7 +155,7 @@ const Cell = ({
     body = (
       <Box pt="7px" pb="1px">
         <Flex alignItems="center" flexWrap="wrap">
-          {(value.map((tag, idx) => (
+          {(value && value.map((tag, idx) => (
             <Box mr={idx === value.length - 1 ? 0 : `${CHAR_WIDTH}px`}>
               <Tag color={tag.color} value={tag.value} />
             </Box>
@@ -200,8 +200,8 @@ const TableInner = styled.div`
 `;
 
 const Table = ({
-  cols,
-  rows,
+  cols = [],
+  rows = [],
 }) => {
   const colLengths = cols.map((col) => getLength(col) + 3);
   const maxLengths = rows.reduce((acc, row) => {
@@ -231,7 +231,7 @@ const Table = ({
         </Row>
         {rows.map((row, rowIdx) => (
           <Row key={rowIdx}>
-            {row.map((cell, cellIdx) => (
+            {row && row.map((cell, cellIdx) => (
               <Cell
                 key={cellIdx}
                 border={cellIdx !== row.length - 1}
@@ -384,7 +384,7 @@ const ViewToggle = ({
               </PickerTitle>
             </Box>
             <Box py="6px">
-              {views.map((view, vIdx) => (
+              {views && views.map((view, vIdx) => (
                 <ViewOuter key={vIdx} onClick={() => {
                   setViewIdx(vIdx);
                   setPickerOpen(false);
@@ -431,7 +431,7 @@ const ListItemText = styled.div`
   min-width: 240px;
 `;
 
-const List = ({ cols, rows }) => {
+const List = ({ cols = [], rows = [] }) => {
   const selectColIdx = findSelectColIdx(cols);
   return (
     <div>
@@ -495,7 +495,7 @@ const GalleryItemText = styled(Text)`
   text-overflow: ellipsis;
 `;
 
-const Gallery = ({ rows }) => (
+const Gallery = ({ rows = [] }) => (
   <div>
     <Grid>
       {rows.map((row, rowIdx) => {
@@ -513,7 +513,7 @@ const Gallery = ({ rows }) => (
   </div>
 );
 
-const Board = ({ cols, rows }) => {
+const Board = ({ cols = [], rows = [] }) => {
   const selectColIdx = findSelectColIdx(cols);
 
   let tagRowsById;
