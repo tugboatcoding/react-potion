@@ -7,7 +7,7 @@ const Cover = styled.img`
   width: 100%;
   height: 30vh;
   opacity: 1;
-  object-position: center 13.45%;
+  object-position: center 50%;
 `;
 
 const CoverComponent = ({ src, ...props }) => {
