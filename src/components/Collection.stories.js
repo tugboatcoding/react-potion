@@ -766,6 +766,48 @@ storiesOf('Collection', module)
                 type: 'text',
               },
             ],
+            [
+              {
+                value: '',
+                type: 'title',
+              },
+              {
+                value: '',
+                type: 'text',
+              },
+              {
+                value: '',
+                type: 'multi_select',
+              },
+              {
+                value: '',
+                type: 'multi_select',
+              },
+              {
+                value: '',
+                type: 'select',
+              },
+              {
+                value: '',
+                type: 'text',
+              },
+              {
+                value: '',
+                type: 'text',
+              },
+              {
+                value: '',
+                type: 'text',
+              },
+              {
+                value: '',
+                type: 'text',
+              },
+              {
+                value: '',
+                type: 'text',
+              },
+            ],
           ]}
         />
       </Box>

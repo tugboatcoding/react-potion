@@ -538,7 +538,7 @@ const Board = ({ cols = [], rows = [] }) => {
         ...acc,
         none: {
           id: 'none',
-          rows: [...acc.none, rowIdx],
+          rows: [...acc.none.rows, rowIdx],
         },
       };
     }, {
