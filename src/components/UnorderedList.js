@@ -9,10 +9,8 @@ const UnorderedList = styled.ul`
   padding-inline-start: 24px;
 `;
 
-const UnorderedListComponent = ({ children }) => {
-  return (
-    <UnorderedList>{children}</UnorderedList>
-  );
-};
+const UnorderedListComponent = ({ children }) => (
+  <UnorderedList className="react-potion-ul">{children}</UnorderedList>
+);
 
 export default UnorderedListComponent;

@@ -15,12 +15,10 @@ const Outer = styled.div`
   width: 100%;
 `;
 
-const Code = ({ children }) => {
-  return (
-    <Outer>
-      {children}
-    </Outer>
-  );
-};
+const Code = ({ children }) => (
+  <Outer className="react-potion-code">
+    {children}
+  </Outer>
+);
 
 export default Code;

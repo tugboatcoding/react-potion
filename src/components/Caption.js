@@ -10,10 +10,10 @@ const Outer = styled.div`
   padding-bottom: 6px;
 `;
 
-const Strong = ({ children }) => (
-  <Outer>
+const Caption = ({ children }) => (
+  <Outer className="react-potion-caption">
     {children}
   </Outer>
 );
 
-export default Strong;
+export default Caption;

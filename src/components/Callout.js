@@ -18,12 +18,10 @@ const Outer = styled.div`
   width: 100%;
 `;
 
-const Callout = ({ children }) => {
-  return (
-    <Outer>
-      {children}
-    </Outer>
-  );
-};
+const Callout = ({ children }) => (
+  <Outer className="react-potion-callout">
+    {children}
+  </Outer>
+);
 
 export default Callout;

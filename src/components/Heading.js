@@ -36,10 +36,10 @@ const Heading4 = styled.h4`
 
 const Heading = ({ size = 800, children }) => (
   <>
-    {size === 900 && <Heading1>{children}</Heading1>}
-    {size === 800 && <Heading2>{children}</Heading2>}
-    {size === 700 && <Heading3>{children}</Heading3>}
-    {size === 600 && <Heading4>{children}</Heading4>}
+    {size === 900 && <Heading1 className="react-potion-h1">{children}</Heading1>}
+    {size === 800 && <Heading2 className="react-potion-h2">{children}</Heading2>}
+    {size === 700 && <Heading3 className="react-potion-h3">{children}</Heading3>}
+    {size === 600 && <Heading4 className="react-potion-h4">{children}</Heading4>}
   </>
 );
 

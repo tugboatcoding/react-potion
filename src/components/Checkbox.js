@@ -24,15 +24,13 @@ const Label = styled.div`
   color: rgb(55, 53, 47);
 `;
 
-const CheckboxComponent = ({ label }) => {
-  return (
-    <Outer>
-      <SquareOuter>
-        <Square />
-      </SquareOuter>
-      <Label>{label}</Label>
-    </Outer>
-  );
-};
+const CheckboxComponent = ({ label }) => (
+  <Outer className="react-potion-checkbox">
+    <SquareOuter>
+      <Square />
+    </SquareOuter>
+    <Label>{label}</Label>
+  </Outer>
+);
 
 export default CheckboxComponent;

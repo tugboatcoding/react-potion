@@ -15,10 +15,8 @@ const Link = styled.a`
   }
 `;
 
-const LinkComponent = ({ href, ...props }) => {
-  return (
-    <Link href={href} {...props} />
-  );
-};
+const LinkComponent = ({ href, ...props }) => (
+  <Link className="react-potion-link" href={href} {...props} />
+);
 
 export default LinkComponent;

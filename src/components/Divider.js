@@ -7,10 +7,8 @@ const Divider = styled.div`
   border-bottom: 1px solid rgba(55, 53, 47, 0.09);
 `;
 
-const DividerComponent = (props) => {
-  return (
-    <Divider {...props} />
-  );
-};
+const DividerComponent = (props) => (
+  <Divider className="react-potion-divider" {...props} />
+);
 
 export default DividerComponent;

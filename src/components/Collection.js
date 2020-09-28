@@ -216,7 +216,7 @@ const Table = ({
     return acc.map((prev, idx) => Math.max(prev, lengths[idx]));
   }, colLengths);
   return (
-    <div>
+    <div className="react-potion-table">
       <TableInner>
         <Row>
           {cols.map((col, colIdx) => (
@@ -434,7 +434,7 @@ const ListItemText = styled.div`
 const List = ({ cols = [], rows = [] }) => {
   const selectColIdx = findSelectColIdx(cols);
   return (
-    <div>
+    <div className="react-potion-list">
       {rows.map((row, rowIdx) => {
         const selectCol = selectColIdx >= 0 ? row[selectColIdx] : null;
         const t = row.find((cell) => cell.type === 'title');
@@ -496,7 +496,7 @@ const GalleryItemText = styled(Text)`
 `;
 
 const Gallery = ({ rows = [] }) => (
-  <div>
+  <div className="react-potion-gallery">
     <Grid>
       {rows.map((row, rowIdx) => {
         const t = row.find((cell) => cell.type === 'title');
@@ -578,7 +578,7 @@ const Board = ({ cols = [], rows = [] }) => {
     }), {});
 
   return (
-    <Flex>
+    <Flex className="react-potion-board">
       {boardColumns.map((boardCol) => {
         const tag = allTags[boardCol.id];
         return (
@@ -622,7 +622,7 @@ const Collection = ({
   const view = views[viewIdx];
 
   return (
-    <div>
+    <div className="react-potion-collection">
       <CollectionBar>
         <ViewToggle name={name} views={views} viewIdx={viewIdx} setViewIdx={setViewIdx} />
       </CollectionBar>

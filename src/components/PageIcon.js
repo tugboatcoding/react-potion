@@ -28,14 +28,12 @@ const Icon = styled.span`
   line-height: 1em;
 `;
 
-const PageIconComponent = ({children, ...props}) => {
-  return (
-    <PageIcon {...props}>
-      <Icon role="image" aria-label={children}>
-        {children}
-      </Icon>
-    </PageIcon>
-  );
-};
+const PageIconComponent = ({ children, ...props }) => (
+  <PageIcon className="react-potion-pageIcon" {...props}>
+    <Icon role="image" aria-label={children}>
+      {children}
+    </Icon>
+  </PageIcon>
+);
 
 export default PageIconComponent;

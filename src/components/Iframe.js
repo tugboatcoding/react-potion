@@ -11,10 +11,8 @@ const Iframe = styled.iframe`
   border-left-width: 0px;
 `;
 
-const IframeComponent = (props) => {
-  return (
-    <Iframe {...props} />
-  );
-};
+const IframeComponent = (props) => (
+  <Iframe className="react-potion-iframe" {...props} />
+);
 
 export default IframeComponent;

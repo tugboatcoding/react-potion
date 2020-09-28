@@ -5,10 +5,8 @@ const ListItem = styled.li`
   padding-left: 4px;
 `;
 
-const ListItemComponent = ({ children }) => {
-  return (
-    <ListItem>{children}</ListItem>
-  );
-};
+const ListItemComponent = ({ children }) => (
+  <ListItem className="react-potion-li">{children}</ListItem>
+);
 
 export default ListItemComponent;

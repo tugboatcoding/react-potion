@@ -3,6 +3,7 @@ import { Box as BaseBox } from 'rebass/styled-components';
 
 const Box = (props) => (
   <BaseBox
+    className="react-potion-box"
     {...props}
     theme={{
       breakpoints: [

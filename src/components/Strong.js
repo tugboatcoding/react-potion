@@ -9,12 +9,10 @@ const Outer = styled.div`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 `;
 
-const Strong = ({ children }) => {
-  return (
-    <Outer>
-      {children}
-    </Outer>
-  );
-};
+const Strong = ({ children }) => (
+  <Outer className="react-potion-strong">
+    {children}
+  </Outer>
+);
 
 export default Strong;

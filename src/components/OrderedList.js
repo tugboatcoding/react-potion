@@ -9,10 +9,8 @@ const OrderedList = styled.ol`
   padding-inline-start: 24px;
 `;
 
-const OrderedListComponent = ({ children }) => {
-  return (
-    <OrderedList>{children}</OrderedList>
-  );
-};
+const OrderedListComponent = ({ children }) => (
+  <OrderedList className="react-potion-ol">{children}</OrderedList>
+);
 
 export default OrderedListComponent;

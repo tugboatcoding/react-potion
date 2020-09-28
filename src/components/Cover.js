@@ -10,10 +10,8 @@ const Cover = styled.img`
   object-position: center 50%;
 `;
 
-const CoverComponent = ({ src, ...props }) => {
-  return (
-    <Cover src={src} {...props} />
-  );
-};
+const CoverComponent = ({ src, ...props }) => (
+  <Cover className="react-potion-cover" src={src} {...props} />
+);
 
 export default CoverComponent;
