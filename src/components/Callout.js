@@ -15,7 +15,6 @@ const Outer = styled.div`
   border-style: solid;
   border-color: transparent;
   background: rgba(235, 236, 237, 0.3);
-  width: 100%;
 `;
 
 const Callout = ({ children }) => (

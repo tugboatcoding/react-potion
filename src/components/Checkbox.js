@@ -29,7 +29,7 @@ const CheckboxComponent = ({ label }) => (
     <SquareOuter>
       <Square />
     </SquareOuter>
-    <Label>{label}</Label>
+    <Label>{typeof label === 'string' ? label : null}</Label>
   </Outer>
 );
 

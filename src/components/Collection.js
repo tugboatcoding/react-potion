@@ -209,7 +209,7 @@ const Table = ({
       if (Array.isArray(cell.value)) {
         const { length } = cell.value;
         const padding = length * TAG_PADDING + (length - 1);
-        return padding + cell.value.reduce((memo, tag) => memo + tag.value.length, 0);
+        return padding + cell.value.reduce((memo, tag) => memo + (tag ? tag.value.length : 0), 0);
       }
       return getLength(cell);
     });
@@ -528,7 +528,7 @@ const Board = ({ cols = [], rows = [] }) => {
           [tagId]: {
             id: tagId,
             rows: memo[tagId]
-              ? [...memo[tagId].rows, rowIdx]
+              ? [...(memo[tagId].rows || []), rowIdx]
               : [rowIdx],
           },
         }), acc);

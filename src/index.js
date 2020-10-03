@@ -15,6 +15,7 @@ export { default as Link } from './components/Link';
 export { default as ListItem } from './components/ListItem';
 export { default as OrderedList } from './components/OrderedList';
 export { default as PageIcon } from './components/PageIcon';
+export { default as Quote } from './components/Quote';
 export { default as Strong } from './components/Strong';
 export { default as Text } from './components/Text';
 export { default as UnorderedList } from './components/UnorderedList';
