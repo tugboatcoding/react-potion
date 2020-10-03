@@ -13,6 +13,8 @@ const Outer = styled.div`
   border-left: 3px solid currentcolor;
   padding-left: 14px;
   padding-right: 14px;
+  margin-top: 5px;
+  margin-bottom: 7px;
 `;
 
 const Quote = ({ children }) => (
