@@ -158,7 +158,7 @@ const Cell = ({
     body = (
       <Box pt="7px" pb="1px">
         <Flex alignItems="center" flexWrap="wrap">
-          {(value && value.map((tag, idx) => (
+          {(value && value.map((tag, idx) => tag && (
             <Box mr={idx === value.length - 1 ? 0 : `${CHAR_WIDTH}px`}>
               <Tag color={tag.color} value={tag.value} />
             </Box>
