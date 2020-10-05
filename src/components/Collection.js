@@ -142,6 +142,9 @@ const Cell = ({
   case 'text':
     body = <CellText>{value}</CellText>;
     break;
+  case 'url':
+    body = <CellText><a href={`//${value}`} target="_blank">{value}</a></CellText>;
+    break;
   case 'select':
     body = (
       <Box pt="7px" pb="1px">

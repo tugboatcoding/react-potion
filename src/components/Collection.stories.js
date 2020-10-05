@@ -834,6 +834,10 @@ storiesOf('Collection', module)
               value: 'Name',
               type: 'title',
             },
+            {
+              value: 'URL',
+              type: 'url',
+            },
           ]}
           rows={[
             [
@@ -845,6 +849,10 @@ storiesOf('Collection', module)
                 value: 'Hello world!',
                 type: 'title',
               },
+              {
+                value: 'google.com',
+                type: 'url',
+              },
             ],
             [
               {
@@ -855,6 +863,10 @@ storiesOf('Collection', module)
                 value: 'Hallo welt!',
                 type: 'title',
               },
+              {
+                value: 'google.com',
+                type: 'url',
+              },
             ],
             [
               {
@@ -864,6 +876,84 @@ storiesOf('Collection', module)
               {
                 value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
                 type: 'title',
+              },
+              {
+                value: 'google.com',
+                type: 'url',
+              },
+            ],
+          ]}
+        />
+      </Box>
+    </>
+  ))
+  .add('Collection with URL', () => (
+    <>
+      <Box padding={['14px', '24px', '32px', '48px', '48px']}>
+        <Collection
+          name="Hola Mundo"
+          views={[
+            {
+              id: '5355ee5b-f904-4a3f-b438-2d8b4cfddaa1',
+              name: '',
+              type: 'table',
+            },
+          ]}
+          cols={[
+            {
+              value: 'Score /5',
+              type: 'select',
+            },
+            {
+              value: 'Name',
+              type: 'title',
+            },
+            {
+              value: 'URL',
+              type: 'url',
+            },
+          ]}
+          rows={[
+            [
+              {
+                value: '⭐️⭐️⭐️⭐️',
+                type: 'select',
+              },
+              {
+                value: 'Hello world!',
+                type: 'title',
+              },
+              {
+                value: 'google.com',
+                type: 'url',
+              },
+            ],
+            [
+              {
+                value: '⭐️⭐️⭐️⭐️',
+                type: 'select',
+              },
+              {
+                value: 'Hallo welt!',
+                type: 'title',
+              },
+              {
+                value: 'google.com',
+                type: 'url',
+              },
+            ],
+            [
+              {
+                value: '⭐️⭐️⭐️⭐️',
+                type: 'select',
+              },
+              {
+                value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                type: 'title',
+              },
+              {
+                value: 'google.com',
+                type: 'url',
               },
             ],
           ]}
