@@ -142,9 +142,11 @@ const Cell = ({
   case 'text':
     body = <CellText>{value}</CellText>;
     break;
-  case 'url':
-    body = <CellText><a href={`//${value}`} target="_blank">{value}</a></CellText>;
+  case 'url': {
+    const href = value && value.includes('http') ? value : `//${value}`;
+    body = <CellText><a href={href} target="_blank" rel="noreferrer">{value}</a></CellText>;
     break;
+  }
   case 'select':
     body = (
       <Box pt="7px" pb="1px">
