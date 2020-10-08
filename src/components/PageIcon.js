@@ -30,7 +30,7 @@ const Icon = styled.span`
 
 const PageIconComponent = ({ children, ...props }) => (
   <PageIcon className="react-potion-pageIcon" {...props}>
-    <Icon role="image" aria-label={children}>
+    <Icon role="img" aria-label={children}>
       {children}
     </Icon>
   </PageIcon>
