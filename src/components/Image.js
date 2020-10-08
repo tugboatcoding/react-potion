@@ -10,7 +10,7 @@ const Image = styled.img`
 `;
 
 const ImageComponent = ({ src, ...props }) => (
-  <Image className="react-potion-img" src={src} {...props} />
+  <Image className="react-potion-img" src={src} onError={(e) => { e.target.style.display = 'none'; }} {...props} />
 );
 
 export default ImageComponent;
