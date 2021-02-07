@@ -43,6 +43,8 @@ npm run storybook
 
 ## Release
 
+Update package version. Then run:
+
 ```
 npm run build
 npm publish

@@ -26,7 +26,7 @@ const CellOuter = styled.div`
   flex-shrink: 0;
   padding: 0 8px;
   min-height: 32px;
-  ${({ width }) => (width ? `width: ${width}px;` : '')}
+  ${({ width }) => (width ? `min-width: ${width}px;` : '')}
   max-width: 313px;
   ${({ border = true }) => (border ? 'border-right: 1px solid rgba(55, 53, 47, 0.09);' : '')}
 `;
