@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Flex from './Flex';
 import Box from './Box';
+import Text from './Text';
 import toggle from '../assets/images/toggle.png';
 
 const Outer = styled.div`
@@ -33,7 +34,9 @@ const Toggle = ({ className, label, children }) => {
         </ToggleElement>
         <div>
           <div>
-            {label || null}
+            {label && (
+              <Text {...label} />
+            )}
           </div>
           <div>
             {open ? children : null}
