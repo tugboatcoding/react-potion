@@ -34,7 +34,7 @@ const Toggle = ({ className, label, children }) => {
         </ToggleElement>
         <div>
           <div>
-            {label && (
+            {!open && label && (
               <Text {...label} />
             )}
           </div>
